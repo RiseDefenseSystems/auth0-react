@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 import { Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import { Nav } from './Nav';
 import { Error } from './Error';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" />
         <Route path="/users" element={<ProtectedUsers />} />
       </Routes>
+      <Analytics />
     </>
   );
 }
