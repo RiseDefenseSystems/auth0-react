@@ -3,6 +3,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { Analytics } from '@vercel/analytics/next';
 import { Nav } from '../components/Nav';
 import '../components/App.css';
 
@@ -26,6 +27,7 @@ class MyApp extends App {
       >
         <Nav />
         <Component {...pageProps} />
+        <Analytics />
       </Auth0Provider>
     );
   }

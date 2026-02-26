@@ -1,6 +1,7 @@
 // gatsby-browser.js
 import React from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { Analytics } from '@vercel/analytics/react';
 import { navigate } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.css';
 import './src/components/App.css';
@@ -20,6 +21,7 @@ export const wrapRootElement = ({ element }) => {
       }}
     >
       {element}
+      <Analytics />
     </Auth0Provider>
   );
 };
